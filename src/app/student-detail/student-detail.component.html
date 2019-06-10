@@ -1,0 +1,103 @@
+<section class="content-header">
+  <h1>
+    Detalhes do Studante
+    <small>> {{student?.name}}</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li>
+      <a [routerLink]="['/dashboard']">
+        <i class="fa fa-dashboard"></i> Home</a>
+    </li>
+    <li>
+      <a  [routerLink]="['/students']">Lista Estudantes</a>
+    </li>
+    <li class="active">{{student?.name}}</li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row mt-1">
+    <div class="box box-primary">
+      <div class="box box-widget widget-user">
+        <!-- Add the bg color to the header using any of the bg-* classes -->
+        <div class="widget-user-header bg-blue" [style.background-image]="'url(' + student?.coverPath + ')'" style="background: center center;">
+          <h3 class="widget-user-username">{{student?.name}}</h3>
+          <h5 class="widget-user-desc">{{student?.job}} </h5>
+        </div>
+        <div class="widget-user-image">
+          <img class="img-circle" [src]="student?.profilePath" alt="User Avatar">
+        </div>
+        <div class="box-footer">
+          <div class="row">
+            <div class="col-sm-4 border-right">
+              <div class="description-block">
+                <h5 class="description-header">{{student?.period}}º</h5>
+                <span class="description-text">Período</span>
+              </div>
+              <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-4 border-right">
+              <div class="description-block">
+                <h5 class="description-header">{{student?.followers}}</h5>
+                <span class="description-text">Seguidores</span>
+              </div>
+              <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-4">
+              <div class="description-block">
+                <h5 class="description-header">{{student?.course}}</h5>
+                <span class="description-text">Curso</span>
+              </div>
+              <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+      </div>
+    </div>
+
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Sobre</h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <strong>
+          <i class="fa fa-book margin-r-5"></i> Sobre mim</strong>
+
+        <p class="text-muted">
+          {{student?.about}}
+        </p>
+
+        <hr>
+
+        <strong>
+          <i class="fa fa-map-marker margin-r-5"></i> Localização</strong>
+
+        <p class="text-muted">{{student?.city}}</p>
+
+        <hr>
+
+        <strong>
+          <i class="fa fa-pencil margin-r-5"></i> Objetivos</strong>
+
+        <p>
+          <span class="label label-primary">{{student?.objective}}</span>
+        </p>
+
+        <hr>
+
+        <strong>
+          <i class="fa fa-file-text-o margin-r-5"></i> Geral</strong>
+
+        <p>{{student?.general}}</p>
+      </div>
+      <!-- /.box-body -->
+    </div>
+  </div>
+</section>

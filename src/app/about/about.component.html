@@ -1,0 +1,52 @@
+<section class="content-header">
+  <h1>
+    Sobre nós
+    <small>Timeline</small>
+  </h1>
+</section>
+
+<section class="content-header">
+  <h1>
+    Inserir tarefa em 2019<br>
+    <input placeholder="hora/dia" #time>
+    <input placeholder="Título" #title >
+    <input placeholder="Body" #body >
+    <button (click)="addNode(time.value,title.value, body.value)">Adicionar</button>
+  </h1>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  
+    <ul class="timeline timeline-inverse" *ngFor="let tm of aboutService.getListTimeLine()">
+        <!-- timeline time label -->
+        <li class="time-label">
+              <span class="bg-red">
+                Em {{tm.title}} 
+              </span>
+        </li>
+        <!-- /.timeline-label -->
+        <!-- timeline item -->
+        <li *ngFor="let item of tm.item">
+          <i [class]="item.classIcon"></i>
+          
+          <div class="timeline-item">
+            <span class="time">
+              <i class="fa fa-clock-o"></i> {{item.time}}</span>
+          
+            <h3 class="timeline-header">
+              {{item.title}}
+            </h3>
+          
+            <div class="timeline-body" [innerHTML]="item.body"></div>
+          </div>
+        </li>
+        <!-- END timeline item -->      
+        
+       
+        <li>
+          <i class="fa fa-arrow-circle-up bg-gray"></i>
+        </li>
+      </ul>
+
+</section>

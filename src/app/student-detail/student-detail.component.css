@@ -1,0 +1,38 @@
+.mt-1 {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  
+  .widget-user .widget-user-header{
+    height: 320px;
+  }
+  
+  .widget-user .widget-user-image {
+    top: 160px;
+    margin-left: -105px;
+  }
+  
+  .widget-user .widget-user-image > img{
+    width: 200px;
+    border: 6px solid #fff;
+  }
+  
+  .widget-user .widget-user-username {
+    margin-top: 190px;
+    font-size: 50px;
+    font-weight: 700;
+  }
+  
+  .widget-user .widget-user-desc {
+      font-size: 20px;
+  }
+  
+  .description-block > .description-text {
+      font-size: 17px;
+  }
+  
+  .description-block > .description-header {
+      font-size: 20px;
+  }
+
+  

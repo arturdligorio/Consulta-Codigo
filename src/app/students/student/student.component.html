@@ -1,0 +1,41 @@
+<a [routerLink]="['/students',student.id]">
+    <div class="box box-widget widget-user">
+      <!-- Add the bg color to the header using any of the bg-* classes -->
+      <div class="widget-user-header bg-aqua-active" [style.background-image]="'url(' + student.coverPath + ')'" style="background: center center;">
+        <h3 class="widget-user-username">{{student.name}}</h3>
+        <h5 class="widget-user-desc">{{student.job}}</h5>
+      </div>
+      <div class="widget-user-image">
+        <img class="img-circle" [src]="student.profilePath" alt="User Avatar">
+      </div>
+      <div class="box-footer">
+        <div class="row">
+          <div class="col-sm-4 border-right">
+            <div class="description-block">
+              <h5 class="description-header">{{student.period}}</h5>
+              <span class="description-text">Período</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-4 border-right">
+            <div class="description-block">
+              <h5 class="description-header">{{student.followers}}</h5>
+              <span class="description-text">Seguidores</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-4">
+            <div class="description-block curso" [title]="student.course">
+              <h5 class="description-header">Curso</h5>
+              <span class="description-text">{{student.course}}</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </div>
+  </a>
